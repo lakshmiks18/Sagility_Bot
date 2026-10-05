@@ -1,0 +1,26 @@
+{
+  "name": "sagility_bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "generate-data": "node testdata/generate-testdata.js",
+    "register:one": "node register.js --count=1",
+    "register:all": "node register.js",
+    "test:one": "cross-env TEST_START=0 TEST_COUNT=1 playwright test",
+    "test:all": "playwright test",
+    "screening:only": "node screening-only.js",
+    "workday:one": "cross-env TEST_START=0 TEST_COUNT=1 playwright test tests/workday.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "cross-env": "^10.1.0",
+    "playwright": "^1.61.1"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
